@@ -1,0 +1,220 @@
+%-------------------------
+% CV Simplificat - Căldăraru Denisa Elena
+% Versiune curată, 1 pagină
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item{\small{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+\newcommand{\name}{Căldăraru Denisa Elena}
+\newcommand{\phone}{0724219274}
+\newcommand{\emaila}{caldararudenisa2@email.com}
+\newcommand{\emailb}{denisa.caldararu@stud.fiir.upb.ro}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\parbox{3.35cm}{%
+\includegraphics[width=3cm,clip]{Poza.jpg}
+}
+\parbox{\dimexpr\linewidth-3.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +40-\phone}\\
+  {Bucharest, Romania } & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  {} &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {} &  \href{https://github.com/taquitohh}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {} & \href{https://www.linkedin.com/in/denisa-căldăraru-063ba5292}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+
+%-----------SUMMARY (SCURT)-----------
+\section{\textbf{Summary}}
+\vspace{1mm}
+\small{Industrial Engineering \& Robotics student at UPB with hands-on experience in web development (React, Astro, TypeScript), CAD software, and embedded systems. Active FTC volunteer and advocate for women in STEM.}
+\vspace{-2mm}
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University Politehnica of Bucharest}{Bucharest}
+      {B.Sc. Industrial Engineering and Robotics}{Oct 2023 - Jul 2027}
+    \resumeSubheading
+      {Nicolae Grigorescu National College}{Câmpina}
+      {Mathematics and Computer Science}{Sep 2019 - Jun 2023}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------Technical skills (FĂRĂ NIVELURI)-----------------
+\section{\textbf{Technical Skills}}
+\vspace{1mm}
+\small{
+\textbf{Web:} React, TypeScript, JavaScript, Astro, Svelte, HTML/CSS \\
+\textbf{Programming:} Python, C/C++, Java \\
+\textbf{CAD/3D:} AutoCAD, CATIA, SolidWorks, Fusion 360, Blender \\
+\textbf{Electronics:} Arduino, LabVIEW, Vivado, Verilog \\
+\textbf{Tools:} Git, GitHub
+}
+\vspace{-2mm}
+
+%-----------PROJECTS (TOP 4)-----------------
+\section{\textbf{Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {\href{https://github.com/taquitohh/Proiect_RN.git}{Neural Network Blender Script Generator}}
+      {Python, React, TypeScript}
+      {2025}
+      {In Progress}
+      \resumeItemListStart
+        \item {AI-based system generating Python scripts for Blender procedural geometry from user parameters.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {Eneba Website Clone}
+      {React, TypeScript — Web102 Hackademy}
+      {2024}
+      {}
+      \resumeItemListStart
+        \item {Functional replica with hooks, state management, and responsive design.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {\href{https://github.com/xon-patrick/SongApp.git}{SongApp — Audio Recognition}}
+      {Python, Fourier Transform — Team Project}
+      {2024}
+      {}
+      \resumeItemListStart
+        \item {Audio fingerprinting app using FFT to identify songs from .wav files.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {\href{https://github.com/taquitohh/DIDI.git}{Educational Website — Vectors}}
+      {Astro, JavaScript}
+      {2022}
+      {}
+      \resumeItemListStart
+        \item {Interactive learning platform for array operations and sorting algorithms.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------Certifications (CONDENSAT)-----------------
+\section{\textbf{Certifications}}
+\vspace{1mm}
+\small{
+\textbf{Cisco CCNA 1} — Introduction to Networks (2020) \textbullet{} 
+\textbf{ECDL} — Full Certification (2021) \textbullet{} 
+\textbf{Adobe Workshop for Girls} — HTML/CSS/JS (2023)
+}
+\vspace{-2mm}
+
+%-----------VOLUNTEERING (GRUPAT)-----------------
+\section{\textbf{Volunteering}}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://natieprineducatie.ro/}{First Tech Challenge Romania}}{Nație prin Educație}
+      {Alumni Referee / Field Inspector / Robot Inspector}{2024 - 2025}
+    \resumeSubheading
+      {ASPOLI Events}{UPB}
+      {RiseUp, StartUp, Robo-Fest, POLIJobs, EFest — Event coordination \& graphic design}{2023 - 2024}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\end{document}

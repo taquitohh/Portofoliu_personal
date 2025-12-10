@@ -1,0 +1,295 @@
+---
+const projects = [
+  {
+    title: 'Neural Network Blender Script Generator',
+    description: 'Sistem AI care generează scripturi Python pentru geometrie procedurală în Blender, bazat pe parametri furnizați de utilizator.',
+    tech: ['Python', 'React', 'TypeScript', 'Neural Networks'],
+    github: 'https://github.com/taquitohh/Proiect_RN.git',
+    image: '/images/projects/neural-blender.jpg',
+    status: 'In Progress',
+    year: '2025'
+  },
+  {
+    title: 'Eneba Website Clone',
+    description: 'Replică funcțională a site-ului Eneba construită cu React și TypeScript, cu focus pe UI/UX și design responsive.',
+    tech: ['React', 'TypeScript', 'CSS'],
+    github: '#',
+    image: '/images/projects/eneba.jpg',
+    year: '2024'
+  },
+  {
+    title: 'SongApp - Audio Recognition',
+    description: 'Aplicație Python care identifică melodii din fișiere .wav folosind Fourier Transform pentru analiza frecvențelor.',
+    tech: ['Python', 'FFT', 'Audio Processing'],
+    github: 'https://github.com/xon-patrick/SongApp.git',
+    image: '/images/projects/songapp.jpg',
+    year: '2024'
+  },
+  {
+    title: 'Educational Website - Vectors',
+    description: 'Platformă interactivă de învățare pentru operații cu vectori și algoritmi de sortare, creată pentru a învăța concepte de programare.',
+    tech: ['Astro', 'JavaScript', 'CSS'],
+    github: 'https://github.com/taquitohh/DIDI.git',
+    image: '/images/projects/vectors.jpg',
+    year: '2022'
+  },
+  {
+    title: 'Rainbow Six Siege Website',
+    description: 'Replică frontend a site-ului oficial Rainbow Six Siege cu animații și structură component-based.',
+    tech: ['Astro', 'Svelte', 'JavaScript', 'CSS'],
+    github: 'https://github.com/taquitohh/atestat3.0',
+    image: '/images/projects/r6.jpg',
+    year: '2023'
+  },
+  {
+    title: 'Lockdown Protocol Website',
+    description: 'Site de prezentare pentru jocul Lockdown Protocol cu hartă interactivă și galerie de imagini.',
+    tech: ['Astro', 'JavaScript', 'CSS'],
+    github: 'https://github.com/taquitohh/atestat_Diana_Iaminsia.git',
+    image: '/images/projects/lockdown.jpg',
+    year: '2024'
+  }
+];
+---
+
+<section id="proiecte" class="projects">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-number">03.</span>
+      <span class="text-ro">Proiecte</span>
+      <span class="text-en">Projects</span>
+    </h2>
+
+    <div class="projects-grid">
+      {projects.map((project, index) => (
+        <article class="project-card" style={`--delay: ${index * 0.1}s`}>
+          <div class="project-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🚀</span>
+            </div>
+            {project.status && (
+              <span class="project-status">{project.status}</span>
+            )}
+          </div>
+          
+          <div class="project-content">
+            <div class="project-header">
+              <h3>{project.title}</h3>
+              <span class="project-year">{project.year}</span>
+            </div>
+            
+            <p class="project-description">{project.description}</p>
+            
+            <div class="project-tech">
+              {project.tech.map((tech) => (
+                <span class="tech-tag">{tech}</span>
+              ))}
+            </div>
+
+            <div class="project-links">
+              <a href={project.github} target="_blank" rel="noopener" class="project-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>View Code</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="more-projects">
+      <a href="https://github.com/taquitohh" target="_blank" rel="noopener" class="btn-more">
+        <span class="text-ro">Vezi mai multe pe GitHub</span>
+        <span class="text-en">See more on GitHub</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 6rem 2rem;
+    background: var(--bg-secondary);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .title-number {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+    margin-left: 1rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid transparent;
+  }
+
+  .project-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .project-image {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    overflow: hidden;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    opacity: 0.3;
+  }
+
+  .project-status {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--secondary);
+    color: white;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .project-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+  }
+
+  .project-year {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--primary);
+  }
+
+  .project-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .tech-tag {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.75rem;
+    color: var(--primary-light);
+    background: rgba(124, 58, 237, 0.15);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  .project-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+
+  .project-link:hover {
+    color: var(--primary);
+  }
+
+  .more-projects {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .btn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-sm);
+    color: var(--primary-light);
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .btn-more:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 480px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>

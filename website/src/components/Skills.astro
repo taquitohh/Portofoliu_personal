@@ -1,0 +1,488 @@
+---
+const skillCategories = [
+  {
+    title: { ro: 'Web Development', en: 'Web Development' },
+    icon: '🌐',
+    source: { ro: 'Web102 Hackademy + Proiecte Personale', en: 'Web102 Hackademy + Personal Projects' },
+    skills: [
+      { name: 'React', level: 'Intermediate' },
+      { name: 'TypeScript', level: 'Intermediate' },
+      { name: 'JavaScript', level: 'Intermediate' },
+      { name: 'Astro', level: 'Advanced' },
+      { name: 'Svelte', level: 'Intermediate' },
+      { name: 'HTML/CSS', level: 'Advanced' }
+    ],
+    color: '#7c3aed'
+  },
+  {
+    title: { ro: 'Programare', en: 'Programming' },
+    icon: '💻',
+    source: { ro: 'Cursuri UPB + Liceu', en: 'UPB Courses + High School' },
+    skills: [
+      { name: 'Python', level: 'Intermediate' },
+      { name: 'C/C++', level: 'Intermediate' },
+      { name: 'Java', level: 'Beginner' }
+    ],
+    color: '#06b6d4'
+  },
+  {
+    title: { ro: 'CAD & 3D', en: 'CAD & 3D' },
+    icon: '🎨',
+    source: { ro: 'Cursuri UPB - Inginerie Industrială', en: 'UPB Courses - Industrial Engineering' },
+    skills: [
+      { name: 'AutoCAD', level: 'Advanced' },
+      { name: 'CATIA', level: 'Advanced' },
+      { name: 'SolidWorks', level: 'Advanced' },
+      { name: 'Fusion 360', level: 'Advanced' },
+      { name: 'Blender', level: 'Modeling' }
+    ],
+    color: '#f472b6'
+  },
+  {
+    title: { ro: 'Electronică', en: 'Electronics' },
+    icon: '⚡',
+    source: { ro: 'Cursuri UPB - Robotică', en: 'UPB Courses - Robotics' },
+    skills: [
+      { name: 'Arduino', level: 'Intermediate' },
+      { name: 'LabVIEW', level: 'Advanced' },
+      { name: 'Vivado', level: 'Beginner' },
+      { name: 'Verilog', level: 'Beginner' },
+      { name: 'Logisim', level: 'Beginner' }
+    ],
+    color: '#10b981'
+  },
+  {
+    title: { ro: 'Unelte & Altele', en: 'Tools & Other' },
+    icon: '🛠️',
+    source: { ro: 'Self-taught + Proiecte', en: 'Self-taught + Projects' },
+    skills: [
+      { name: 'Git', level: 'Intermediate' },
+      { name: 'GitHub', level: 'Intermediate' },
+      { name: 'VS Code', level: 'Advanced' },
+      { name: 'Overleaf', level: 'Advanced' },
+      { name: 'Figma', level: 'Intermediate' }
+    ],
+    color: '#f59e0b'
+  }
+];
+
+const certifications = [
+  {
+    badge: 'Cisco',
+    title: { ro: 'CCNA 1 - Introduction to Networks', en: 'CCNA 1 - Introduction to Networks' },
+    year: 2020,
+    source: 'Cisco Networking Academy',
+    icon: '🌐'
+  },
+  {
+    badge: 'ECDL',
+    title: { ro: 'Certificare Completă (5 module)', en: 'Full Certification (5 modules)' },
+    year: 2021,
+    source: 'ECDL Romania',
+    icon: '💻'
+  },
+  {
+    badge: 'Adobe',
+    title: { ro: 'Workshop for Girls - HTML/CSS/JS', en: 'Workshop for Girls - HTML/CSS/JS' },
+    year: 2023,
+    source: 'Adobe Romania',
+    icon: '🎨'
+  },
+  {
+    badge: 'English',
+    title: { ro: 'Certificat Nivel B2', en: 'B2 Level Certificate' },
+    year: 2023,
+    source: { ro: 'Examen Bacalaureat', en: 'High School Proficiency Exam' },
+    icon: '🗣️'
+  }
+];
+---
+
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-number">02.</span>
+      <span class="text-ro">Skills & Tehnologii</span>
+      <span class="text-en">Skills & Technologies</span>
+    </h2>
+
+    <div class="skills-grid">
+      {skillCategories.map((category, index) => (
+        <div class="skill-card" style={`--card-color: ${category.color}; --delay: ${index * 0.1}s`}>
+          <div class="skill-header">
+            <span class="skill-icon">{category.icon}</span>
+            <div class="skill-header-text">
+              <h3>
+                <span class="text-ro">{category.title.ro}</span>
+                <span class="text-en">{category.title.en}</span>
+              </h3>
+              <span class="skill-source">
+                <span class="text-ro">📚 {category.source.ro}</span>
+                <span class="text-en">📚 {category.source.en}</span>
+              </span>
+            </div>
+          </div>
+          <div class="skill-tags">
+            {category.skills.map((skill, i) => (
+              <span class="skill-tag" style={`--tag-delay: ${i * 0.05}s`}>
+                <span class="skill-name">{skill.name}</span>
+                <span class="skill-level">{skill.level}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="certifications">
+      <h3 class="cert-title">
+        <span class="text-ro">🏆 Certificări</span>
+        <span class="text-en">🏆 Certifications</span>
+      </h3>
+      <div class="cert-grid">
+        {certifications.map((cert, index) => (
+          <div class="cert-card" style={`--cert-delay: ${index * 0.15}s`}>
+            <div class="cert-icon">{cert.icon}</div>
+            <div class="cert-year">
+              <span class="year-number">{cert.year}</span>
+            </div>
+            <div class="cert-content">
+              <span class="cert-badge">{cert.badge}</span>
+              <h4>
+                <span class="text-ro">{cert.title.ro}</span>
+                <span class="text-en">{cert.title.en}</span>
+              </h4>
+              <p class="cert-source">
+                {typeof cert.source === 'string' ? (
+                  cert.source
+                ) : (
+                  <>
+                    <span class="text-ro">{cert.source.ro}</span>
+                    <span class="text-en">{cert.source.en}</span>
+                  </>
+                )}
+              </p>
+            </div>
+            <div class="cert-shine"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills {
+    padding: 6rem 2rem;
+    background: var(--bg-primary);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .title-number {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+    margin-left: 1rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .skill-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--card-color);
+  }
+
+  .skill-card:hover {
+    border-color: var(--card-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .skill-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .skill-icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+  }
+
+  .skill-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .skill-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .skill-source {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+    animation-delay: calc(var(--delay) + var(--tag-delay) + 0.3s);
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .skill-name {
+    color: var(--text-primary);
+  }
+
+  .skill-level {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 10px;
+    background: rgba(124, 58, 237, 0.2);
+    color: var(--primary-light);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .skill-card:hover .skill-tag {
+    background: rgba(124, 58, 237, 0.2);
+  }
+
+  /* Certifications Styles */
+  .certifications {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem;
+  }
+
+  .cert-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cert-card {
+    position: relative;
+    background: var(--bg-secondary);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    padding-left: 4.5rem;
+    overflow: hidden;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideInRight 0.6s ease forwards;
+    animation-delay: var(--cert-delay);
+    border: 1px solid transparent;
+  }
+
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .cert-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+  }
+
+  .cert-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    opacity: 0.3;
+    transition: var(--transition);
+  }
+
+  .cert-card:hover .cert-icon {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  .cert-year {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--gradient-1);
+    padding: 0.5rem 1rem;
+    border-radius: 0 var(--radius) 0 var(--radius);
+  }
+
+  .year-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    font-family: 'Fira Code', monospace;
+  }
+
+  .cert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cert-badge {
+    display: inline-block;
+    background: var(--gradient-1);
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  .cert-content h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  .cert-source {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  .cert-shine {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: 0.6s;
+  }
+
+  .cert-card:hover .cert-shine {
+    left: 100%;
+  }
+
+  @media (max-width: 480px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cert-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+      padding-left: 1.5rem;
+      padding-top: 3rem;
+    }
+
+    .cert-icon {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      transform: none;
+    }
+
+    .cert-card:hover .cert-icon {
+      transform: scale(1.2);
+    }
+  }
+</style>

@@ -1,0 +1,153 @@
+---
+// Translations object
+const translations = {
+  ro: {
+    nav: {
+      home: 'Acasă',
+      about: 'Despre',
+      skills: 'Skills',
+      projects: 'Proiecte',
+      volunteering: 'Voluntariat',
+      contact: 'Contact'
+    },
+    hero: {
+      greeting: '👋 Salut, eu sunt',
+      title: 'Industrial Engineering & Robotics Student',
+      description: 'Pasionată de <span class="tech-highlight">web development</span>, <span class="tech-highlight">robotică</span> și <span class="tech-highlight">design digital</span>. Construiesc experiențe web moderne și contribui la comunitatea tech.',
+      btnProjects: 'Vezi Proiectele',
+      btnContact: 'Contactează-mă'
+    },
+    about: {
+      title: 'Despre Mine',
+      p1: 'Sunt studentă în anul II la <strong>Facultatea de Inginerie Industrială și Robotică</strong> din cadrul Universității Politehnica București, specializarea Științe Inginerești Aplicate.',
+      p2: 'Pasiunea mea pentru tehnologie a început în liceu, unde am descoperit programarea și web development-ul. De atunci, am lucrat la numeroase proiecte personale și de echipă, îmbinând creativitatea cu rezolvarea tehnică a problemelor.',
+      p3: 'Sunt activă în comunitatea tech, voluntariind la evenimente precum <strong>First Tech Challenge Romania</strong> ca arbitru și inspector de roboți, și susțin reprezentarea femeilor în STEM.',
+      education: 'Educație',
+      educationValue: 'UPB - Industrial Engineering & Robotics',
+      location: 'Locație',
+      locationValue: 'București, România',
+      volunteer: 'Voluntariat',
+      volunteerValue: 'FTC Romania - Referee & Inspector',
+      statProjects: 'Proiecte',
+      statEvents: 'Evenimente Voluntariat',
+      statCerts: 'Certificări',
+      statYears: 'Ani Experiență'
+    },
+    skills: {
+      title: 'Skills & Tehnologii',
+      certTitle: '🏆 Certificări'
+    },
+    projects: {
+      title: 'Proiecte',
+      viewCode: 'View Code',
+      moreGithub: 'Vezi mai multe pe GitHub',
+      inProgress: 'In Progress'
+    },
+    volunteering: {
+      title: 'Voluntariat',
+      intro: 'Voluntariatul mi-a oferit oportunitatea de a dezvolta abilități esențiale și de a contribui la comunitatea tech din România. 🇷🇴',
+      events: 'Evenimente',
+      learnMore: 'Află mai multe →',
+      skillsTitle: '💪 Abilități dezvoltate',
+      statEvents: 'Evenimente',
+      statOrgs: 'Organizații',
+      statYears: 'Ani activi',
+      statMemories: 'Amintiri',
+      skills: ['Comunicare', 'Leadership', 'Organizare evenimente', 'Lucru în echipă', 'Problem-solving', 'Design grafic'],
+      ftcRole: 'FTC Romania - Alumni Volunteer',
+      ftcDesc: 'Referee, Field Inspector și Robot Inspector la competițiile First Tech Challenge România.',
+      aspoliRole: 'Event Volunteer',
+      aspoliDesc: 'Coordonare participanți, ghidare invitați, dezvoltare materiale grafice și organizare echipe.'
+    },
+    contact: {
+      title: 'Contact',
+      heading: 'Hai să discutăm! 👋',
+      description: 'Sunt mereu deschisă pentru oportunități noi, colaborări la proiecte interesante, sau pur și simplu o discuție despre tehnologie. Nu ezita să mă contactezi!',
+      email: 'Email',
+      location: 'Locație',
+      ctaTitle: 'Deschisă pentru oportunități',
+      ctaDesc: 'Caut internship-uri și colaborări în web development, robotică sau proiecte tech interesante.',
+      btnSend: 'Trimite un mesaj'
+    },
+    footer: {
+      madeBy: 'Design & Development de',
+      builtWith: 'Built with Astro'
+    }
+  },
+  en: {
+    nav: {
+      home: 'Home',
+      about: 'About',
+      skills: 'Skills',
+      projects: 'Projects',
+      volunteering: 'Volunteering',
+      contact: 'Contact'
+    },
+    hero: {
+      greeting: '👋 Hi, I am',
+      title: 'Industrial Engineering & Robotics Student',
+      description: 'Passionate about <span class="tech-highlight">web development</span>, <span class="tech-highlight">robotics</span> and <span class="tech-highlight">digital design</span>. Building modern web experiences and contributing to the tech community.',
+      btnProjects: 'View Projects',
+      btnContact: 'Contact Me'
+    },
+    about: {
+      title: 'About Me',
+      p1: 'I am a second-year student at the <strong>Faculty of Industrial Engineering and Robotics</strong> at Politehnica University of Bucharest, specializing in Applied Engineering Sciences.',
+      p2: 'My passion for technology started in high school, where I discovered programming and web development. Since then, I have worked on numerous personal and team projects, combining creativity with technical problem-solving.',
+      p3: 'I am active in the tech community, volunteering at events like <strong>First Tech Challenge Romania</strong> as a referee and robot inspector, and I support the representation of women in STEM.',
+      education: 'Education',
+      educationValue: 'UPB - Industrial Engineering & Robotics',
+      location: 'Location',
+      locationValue: 'Bucharest, Romania',
+      volunteer: 'Volunteering',
+      volunteerValue: 'FTC Romania - Referee & Inspector',
+      statProjects: 'Projects',
+      statEvents: 'Volunteer Events',
+      statCerts: 'Certifications',
+      statYears: 'Years Experience'
+    },
+    skills: {
+      title: 'Skills & Technologies',
+      certTitle: '🏆 Certifications'
+    },
+    projects: {
+      title: 'Projects',
+      viewCode: 'View Code',
+      moreGithub: 'See more on GitHub',
+      inProgress: 'In Progress'
+    },
+    volunteering: {
+      title: 'Volunteering',
+      intro: 'Volunteering gave me the opportunity to develop essential skills and contribute to the tech community in Romania. 🇷🇴',
+      events: 'Events',
+      learnMore: 'Learn more →',
+      skillsTitle: '💪 Skills Developed',
+      statEvents: 'Events',
+      statOrgs: 'Organizations',
+      statYears: 'Active Years',
+      statMemories: 'Memories',
+      skills: ['Communication', 'Leadership', 'Event Organization', 'Teamwork', 'Problem-solving', 'Graphic Design'],
+      ftcRole: 'FTC Romania - Alumni Volunteer',
+      ftcDesc: 'Referee, Field Inspector and Robot Inspector at First Tech Challenge Romania competitions.',
+      aspoliRole: 'Event Volunteer',
+      aspoliDesc: 'Participant coordination, guest guidance, graphic materials development and team organization.'
+    },
+    contact: {
+      title: 'Contact',
+      heading: "Let's talk! 👋",
+      description: "I'm always open to new opportunities, collaborations on interesting projects, or simply a chat about technology. Don't hesitate to reach out!",
+      email: 'Email',
+      location: 'Location',
+      ctaTitle: 'Open for opportunities',
+      ctaDesc: 'Looking for internships and collaborations in web development, robotics or interesting tech projects.',
+      btnSend: 'Send a message'
+    },
+    footer: {
+      madeBy: 'Design & Development by',
+      builtWith: 'Built with Astro'
+    }
+  }
+};
+
+export { translations };
+---

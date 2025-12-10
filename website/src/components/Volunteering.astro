@@ -1,0 +1,425 @@
+---
+const volunteering = [
+  {
+    organization: 'Nație prin Educație',
+    role: { ro: 'FTC Romania - Alumni Volunteer', en: 'FTC Romania - Alumni Volunteer' },
+    events: [
+      { name: 'Regional / National 2024', location: 'București / Cluj / Iași / Arad', date: 'Ian - Mar 2024' },
+      { name: 'Regional 2025', location: 'Piatra Neamț / Pitești', date: 'Ian - Feb 2025' }
+    ],
+    description: {
+      ro: 'Referee, Field Inspector și Robot Inspector la competițiile First Tech Challenge România.',
+      en: 'Referee, Field Inspector and Robot Inspector at First Tech Challenge Romania competitions.'
+    },
+    icon: '🤖',
+    link: 'https://natieprineducatie.ro/',
+    color: '#f97316'
+  },
+  {
+    organization: 'ASPOLI - UPB',
+    role: { ro: 'Event Volunteer', en: 'Event Volunteer' },
+    events: [
+      { name: 'RiseUp 2023', location: 'București', date: 'Oct 2023' },
+      { name: 'StartUp 2023', location: 'Rectorat UPB', date: 'Oct 2023' },
+      { name: 'Robo-Fest 2023', location: 'Rectorat UPB', date: 'Nov 2023' },
+      { name: 'POLIJobs 2023', location: 'Rectorat UPB', date: 'Nov 2023' },
+      { name: 'EFest 2024', location: 'Rectorat UPB', date: 'Apr 2024' }
+    ],
+    description: {
+      ro: 'Coordonare participanți, ghidare invitați, dezvoltare materiale grafice și organizare echipe.',
+      en: 'Participant coordination, guest guidance, graphic materials development and team organization.'
+    },
+    icon: '🎪',
+    link: '#',
+    color: '#7c3aed'
+  }
+];
+
+const skillsRo = ['Comunicare', 'Leadership', 'Organizare evenimente', 'Lucru în echipă', 'Problem-solving', 'Design grafic'];
+const skillsEn = ['Communication', 'Leadership', 'Event Organization', 'Teamwork', 'Problem-solving', 'Graphic Design'];
+---
+
+<section id="voluntariat" class="volunteering">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-number">04.</span>
+      <span class="text-ro">Voluntariat</span>
+      <span class="text-en">Volunteering</span>
+    </h2>
+
+    <p class="section-intro">
+      <span class="text-ro">Voluntariatul mi-a oferit oportunitatea de a dezvolta abilități esențiale și de a contribui la comunitatea tech din România. 🇷🇴</span>
+      <span class="text-en">Volunteering gave me the opportunity to develop essential skills and contribute to the tech community in Romania. 🇷🇴</span>
+    </p>
+
+    <div class="volunteer-grid">
+      {volunteering.map((vol) => (
+        <div class="volunteer-card" style={`--card-accent: ${vol.color}`}>
+          <div class="card-header">
+            <span class="card-icon">{vol.icon}</span>
+            <div>
+              <h3>{vol.organization}</h3>
+              <span class="card-role">
+                <span class="text-ro">{vol.role.ro}</span>
+                <span class="text-en">{vol.role.en}</span>
+              </span>
+            </div>
+          </div>
+
+          <p class="card-description">
+            <span class="text-ro">{vol.description.ro}</span>
+            <span class="text-en">{vol.description.en}</span>
+          </p>
+
+          <div class="events-list">
+            <h4>
+              <span class="text-ro">Evenimente</span>
+              <span class="text-en">Events</span>
+            </h4>
+            {vol.events.map((event) => (
+              <div class="event-item">
+                <div class="event-dot"></div>
+                <div class="event-info">
+                  <span class="event-name">{event.name}</span>
+                  <span class="event-meta">{event.location} • {event.date}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {vol.link !== '#' && (
+            <a href={vol.link} target="_blank" rel="noopener" class="card-link">
+              <span class="text-ro">Află mai multe →</span>
+              <span class="text-en">Learn more →</span>
+            </a>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="skills-gained">
+      <h4>
+        <span class="text-ro">💪 Abilități dezvoltate</span>
+        <span class="text-en">💪 Skills Developed</span>
+      </h4>
+      <div class="skills-tags">
+        <div class="text-ro">
+          {skillsRo.map((skill) => (
+            <span class="skill-tag">{skill}</span>
+          ))}
+        </div>
+        <div class="text-en">
+          {skillsEn.map((skill) => (
+            <span class="skill-tag">{skill}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="volunteer-stats">
+      <div class="vol-stat">
+        <span class="vol-stat-number">7+</span>
+        <span class="vol-stat-label">
+          <span class="text-ro">Evenimente</span>
+          <span class="text-en">Events</span>
+        </span>
+      </div>
+      <div class="vol-stat">
+        <span class="vol-stat-number">2</span>
+        <span class="vol-stat-label">
+          <span class="text-ro">Organizații</span>
+          <span class="text-en">Organizations</span>
+        </span>
+      </div>
+      <div class="vol-stat">
+        <span class="vol-stat-number">2+</span>
+        <span class="vol-stat-label">
+          <span class="text-ro">Ani activi</span>
+          <span class="text-en">Active Years</span>
+        </span>
+      </div>
+      <div class="vol-stat">
+        <span class="vol-stat-number">∞</span>
+        <span class="vol-stat-label">
+          <span class="text-ro">Amintiri</span>
+          <span class="text-en">Memories</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .volunteering {
+    padding: 6rem 2rem;
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .volunteering::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    width: 400px;
+    height: 400px;
+    background: var(--primary);
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.1;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .title-number {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+    margin-left: 1rem;
+  }
+
+  .section-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+  }
+
+  .volunteer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .volunteer-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .volunteer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-accent);
+  }
+
+  .volunteer-card:hover {
+    border-color: var(--card-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .card-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .card-role {
+    font-size: 0.9rem;
+    color: var(--card-accent);
+    font-weight: 500;
+  }
+
+  .card-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .events-list {
+    margin-bottom: 1.5rem;
+  }
+
+  .events-list h4 {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+
+  .event-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    border-left: 2px solid var(--bg-secondary);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .event-item:hover {
+    border-left-color: var(--card-accent);
+  }
+
+  .event-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--card-accent);
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  .event-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+  }
+
+  .event-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--card-accent);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+  }
+
+  .card-link:hover {
+    gap: 0.5rem;
+  }
+
+  .skills-gained {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .skills-gained h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .skill-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid transparent;
+  }
+
+  .skill-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary-light);
+    transform: translateY(-2px);
+  }
+
+  .volunteer-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .vol-stat {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+  }
+
+  .vol-stat:hover {
+    transform: translateY(-3px);
+  }
+
+  .vol-stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .vol-stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 968px) {
+    .volunteer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .volunteer-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .volunteer-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
