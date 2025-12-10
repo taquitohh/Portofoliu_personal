@@ -1,0 +1,404 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Căldăraru Denisa Elena} % Your Name
+\newcommand{\phone}{0724219274} % Your Phone Number
+\newcommand{\emaila}{caldararudenisa2@email.com} %Email 1
+\newcommand{\emailb}{denisa.caldararu@stud.fiir.upb.ro} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{3.35cm}{%
+\includegraphics[width=3cm,clip]{Poza.jpg}
+}
+\parbox{\dimexpr\linewidth-3.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +40-\phone}\\
+  {Bucharest, Romania } & \href{}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {} &  \href{https://github.com/taquitohh}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {} & \href{www.linkedin.com/in/denisa-căldăraru-063ba5292}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {LinkedIn Profile}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+%-----------ABOUT ME-----------
+\section{\textbf{Summary}}
+  \resumeSubHeadingListStart
+      {I am a 21-year-old Industrial Engineering and Robotics student, motivated by a strong passion for technology, programming, and digital design. I enjoy working on multidisciplinary projects where I can combine technical problem-solving with creativity, whether through software development, robotics competitions, or graphic work. I am committed to continuous learning, especially in areas such as web development, automation, and technical design. My volunteering experience has strengthened my communication skills, adaptability, and ability to collaborate effectively in dynamic environments. I am determined to contribute to the tech community and support the representation of women in STEM.}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+   
+    \resumeSubheading
+      { Nicolae Grigorescu National College}{Câmpina, Prahova}
+      {High School Diploma, Mathematics and Computer Science}{Sep 2019 - Jun 2023}
+       \resumeSubheading
+      { University Politehnica of Bucharest}{Bucharest}
+      {Bachelor's degree, Faculty of Industrial Engineering and Robotics, Applied Engineering Sciences}{Oct 2023 - Jul 2027}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+%-----------Achievements-----------------
+\section{\textbf{Licenses and Certifications}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Cisco Networking Certificate}{ CCNA 1: Introduction to Networks}{ Jun 2020}
+
+\resumePOR{ECDL Certification}{ Computer Essentials, Word Processing, Spreadsheets, PowerPoint, Databases}{ Jun 2021}
+
+\resumePOR{English Language Certificate}{ B2 Level \\ (obtained through a final high school proficiency examination)}{ Jun 2023}
+
+\resumePOR{Adobe Workshop for Girls}{ HTML, CSS, JavaScript \\ (aimed at encouraging girls in tech)}{ Jun 2023}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills}}
+
+\noindent \textit{Most of the skills listed below have been acquired and reinforced through relevant coursework from my university program.}
+
+\begin{tabularx}{\textwidth}{X X X X}
+\textbf{CAD} & \textbf{Electronics} & \textbf{Programming} & \textbf{Web Development} \\
+AutoCAD (\textit{Advanced}) & Arduino (\textit{Intermediate}) & C (\textit{Intermediate}) & HTML (\textit{Advanced}) \\
+Fusion 360 (\textit{Advanced}) & Vivado (\textit{Beginner}) & C++ (\textit{Intermediate}) & CSS (\textit{Advanced}) \\
+CATIA (\textit{Advanced}) & Verilog (\textit{Beginner}) & Java (\textit{Beginner}) & Astro (\textit{Advanced}) \\
+SolidWorks (\textit{Advanced}) & LabVIEW (\textit{Advanced}) & Python (\textit{Intermediate}) & Svelte (\textit{Intermediate}) \\
+Blender (\textit{Modeling only}) & Logisim (\textit{Beginner}) &  & React (\textit{Intermediate}) \\
+ &  &  & JavaScript (\textit{Intermediate}) \\
+ &  &  & TypeScript (\textit{Intermediate}) \\
+\end{tabularx}
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {\href{https://github.com/taquitohh/DIDI.git}{Educational Website — Vectors in Programming}} 
+      {Personal Project for High School Informatics} 
+      {2022}
+
+      \resumeItemListStart
+        \item {Created a personal website to teach fundamental programming concepts to my younger sister.}
+        \item {Focused on arrays, including declaration, traversal, insertion, deletion, verification of properties, and sorting (bubble sort, selection sort, insertion sort, merging).}
+        \item {Developed interactive examples and solved problems to reinforce learning.}
+        \item {Built using Astro and JavaScript, improving skills in web development and structuring educational content for clarity and usability.}
+    \resumeItemListEnd
+
+
+   \resumeProject
+      {\href{https://github.com/taquitohh/atestat3.0}{Website Model — Rainbow Six Siege}} 
+      {Frontend Project (No Database)} 
+      {2022 -- 2023}
+
+      \resumeItemListStart
+        \item {Developed a full frontend replica of the official Tom Clancy's Rainbow Six® Siege website.}
+        \item {Used Astro, HTML, CSS, Svelte and JavaScript to recreate the layout, structure, animations, and user flow.}
+        \item {Improved my understanding of website architecture, component-based development, and clean UI/UX design.}
+        \item {Strengthened my ability to self-learn new technologies such as Astro and Svelte.}
+    \resumeItemListEnd
+
+
+    \resumeProject
+      {Butcher — Presentation Website} 
+      {Frontend Project (No Database, Collaborative)} 
+      {2022 -- 2023}
+ 
+      \resumeItemListStart
+        \item {Developed a full frontend website for a small meat and delicatessen business, presenting their products and services.}
+        \item {Used Astro, HTML, CSS, and JavaScript to create an attractive, responsive, and user-friendly design.}
+        \item {Enhanced skills in layout design, UI/UX, and creating interactive web components.}
+        \item {Collaborated with a classmate, coordinating tasks and combining ideas into a cohesive website.}
+    \resumeItemListEnd
+
+
+     \resumeProject
+      {Website Model — Eneba} 
+      {Frontend Project (No Database)} 
+      {Mar -- Jun 2024}
+
+      \resumeItemListStart
+        \item {Built a functional React + TypeScript replica of the Eneba website as part of the Web102 Hackademy course.}
+        \item {Focused on UI/UX reproduction, component modularity, and responsive design.}
+        \item {Gained practical experience with React concepts such as hooks, state management, props, and reusable components.}
+    \resumeItemListEnd
+    
+    \resumeProject
+          {\href{https://github.com/xon-patrick/Chain-of-Dimensions-Calc.git}{Team Project — Dimension Calculator}} 
+          {First-Year Academic Project for "Industrial Processes" course (developed in C)} 
+          {Dec 2023 -- Jan 2024}
+    
+          \resumeItemListStart
+            \item {Chose to develop the application in C to calculate dimensions in a chain of measurements based on user input.}
+            \item {Implemented a graphical interface using the raygui library, providing a simple and intuitive front panel for user interaction.}
+            \item {Collaborated with a team, improving skills in teamwork, planning, and debugging in C.}
+            \item {Enhanced understanding of integrating GUI components in C applications and handling user input effectively.}
+        \resumeItemListEnd
+
+    \resumeProject
+          {\href{https://github.com/taquitohh/atestat_Diana_Iaminsia.git}{Website — "Lockdown Protocol"}} 
+          {Frontend Project (Astro, JavaScript)} 
+          {Mar 2024}
+    
+          \resumeItemListStart
+            \item Developed a static presentation website for the game *Lockdown Protocol*, built with Astro and JavaScript.
+            \item Designed a clean and intuitive structure including an interactive map of the game world, a clear multi-section presentation, and an extensive image gallery.
+            \item Focused on providing an organized and visually coherent user experience inspired by the game's mechanics and atmosphere.
+            \item Improved understanding of component-based structuring in Astro, responsive layouts, and static asset optimization.
+        \resumeItemListEnd
+    
+
+        \resumeProject
+          {\href{https://github.com/xon-patrick/SongApp.git}{Team Project — SongApp}} 
+          {Advanced Mathematics Group Project for "Special Mathematics" course (Python)} 
+          {Apr 2024}
+    
+          \resumeItemListStart
+            \item {Developed a Python application that takes a ".wav" file and transforms it into frequency data using Fourier Transform.}
+            \item {Implemented a matching system to identify the song from a database based on frequency analysis.}
+            \item {Collaborated with a team, improving skills in teamwork, planning, and algorithm implementation.}
+            \item {Enhanced understanding of applying Fourier Transform in practical applications and handling audio data in Python.}
+        \resumeItemListEnd
+    
+        \resumeProject
+    {\href{https://github.com/taquitohh/Proiect_RN.git}{Neural Network–Based Blender Script Generator}}
+    {Python, React, TypeScript — Neural Networks}
+    {2025 (Work in progress)}
+
+    \resumeItemListStart
+        \item Developing a neural-network-based system that generates Python scripts for Blender based on user-provided parameters.
+        \item Implementing the core model in Python and integrating it with a React + TypeScript web interface for real-time configuration and visualization.
+        \item Aiming to automate procedural geometry scripting in Blender for beginners and rapid prototyping.
+    \resumeItemListEnd
+    
+
+
+
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+
+%-----------volunteers-----------------
+\section{\textbf{Volunteers}}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\href{https://www.facebook.com/riseupstudentfest/}{RiseUp - 2023 edition}}{ASPOLI}
+  {Bucharest, outdoor festival}{Oct 2023}
+  \resumeItemListStart
+    \item {Coordination of participants.}
+    \item {First major volunteering experience; helped develop communication skills, quick problem-solving, and maintaining calm and order among participants.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://startup.upb.ro/}{StartUp - 2023 edition}}{ASPOLI}
+  {Bucharest, Rectorat UPB}{26 - 27 Oct 2023}
+  \resumeItemListStart
+    \item {Guided the guests.}
+    \item {Assisted in the annual contest where young people present business ideas.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://robofest.upb.ro/}{Robo-Fest - 2023 edition}}{ASPOLI}
+  {Bucharest, Rectorat UPB}{1 - 3 Nov 2023}
+  \resumeItemListStart
+    \item {Provided correct information to guests.}
+    \item {Assisted in graphic development of materials used for promotion.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://polijobs.upb.ro/}{POLIJobs - 2023 edition}}{ASPOLI}
+  {Bucharest, Rectorat UPB}{Nov 2023}
+  \resumeItemListStart
+    \item {Planned organization and team relationships.}
+    \item {Organized the team efficiently.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://efest.upb.ro/}{EFest - 2024 edition}}{ASPOLI}
+  {Bucharest, Rectorat UPB}{1 - 14 Apr 2024}
+  \resumeItemListStart
+    \item {Provided correct information to guests.}
+    \item {Refereed matches.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://natieprineducatie.ro/}{First Tech Challenge Romania - Regional / National}}{Nație prin Educație}
+  {Bucharest / Cluj / Iași / Arad}{25 Jan - 24 Mar 2024}
+  \resumeItemListStart
+    \item {Alumni volunteering.}
+    \item {Referee / Field Inspector / Robot Inspector.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://natieprineducatie.ro/}{First Tech Challenge Romania - Regional}}{Nație prin Educație}
+  {Piatra Neamț / Pitești}{17 Jan - 9 Feb 2025}
+  \resumeItemListStart
+    \item {Alumni volunteering.}
+    \item {Referee / Field Inspector / Robot Inspector.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+\end{document}

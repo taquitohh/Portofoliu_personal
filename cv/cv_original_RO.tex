@@ -1,0 +1,393 @@
+%-------------------------
+% CV în LaTeX - Versiune Română
+% Autor: Căldăraru Denisa Elena
+%------------------------
+
+%---- Pachete și funcții necesare ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formatare secțiuni
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Comenzi personalizate
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+%-------------------------------------------
+%%%%%%  CV-UL ÎNCEPE AICI  %%%%%%%%%%%
+\newcommand{\name}{Căldăraru Denisa Elena}
+\newcommand{\phone}{0724219274}
+\newcommand{\emaila}{caldararudenisa2@email.com}
+\newcommand{\emailb}{denisa.caldararu@stud.fiir.upb.ro}
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------ANTET-----------------
+
+
+\parbox{3.35cm}{%
+\includegraphics[width=3cm,clip]{Poza.jpg}
+}
+\parbox{\dimexpr\linewidth-3.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +40-\phone}\\
+  {București, România } & \href{}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {} &  \href{https://github.com/taquitohh}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {Profil GitHub}} \\
+  {} & \href{www.linkedin.com/in/denisa-căldăraru-063ba5292}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {Profil LinkedIn}}
+\end{tabularx}
+}
+
+
+
+%-----------DESPRE MINE-----------
+\section{\textbf{Rezumat}}
+  \resumeSubHeadingListStart
+      {Am 21 de ani și sunt studentă la Inginerie Industrială și Robotică, motivată de o puternică pasiune pentru tehnologie, programare și design digital. Îmi place să lucrez la proiecte multidisciplinare unde pot combina rezolvarea tehnică a problemelor cu creativitatea, fie prin dezvoltare software, competiții de robotică sau lucrări grafice. Sunt dedicată învățării continue, în special în domenii precum dezvoltarea web, automatizare și design tehnic. Experiența mea de voluntariat mi-a întărit abilitățile de comunicare, adaptabilitate și capacitatea de a colabora eficient în medii dinamice. Sunt hotărâtă să contribui la comunitatea tech și să susțin reprezentarea femeilor în STEM.}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------EDUCAȚIE-----------
+\section{\textbf{Educație}}
+  \resumeSubHeadingListStart
+   
+    \resumeSubheading
+      { Colegiul Național Nicolae Grigorescu}{Câmpina, Prahova}
+      {Diplomă de Bacalaureat, Matematică-Informatică}{Sep 2019 - Iun 2023}
+       \resumeSubheading
+      { Universitatea Politehnica din București}{București}
+      {Licență, Facultatea de Inginerie Industrială și Robotică, Științe Inginerești Aplicate}{Oct 2023 - Iul 2027}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Certificări-----------------
+\section{\textbf{Licențe și Certificări}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumePOR{Certificat Cisco Networking}{ CCNA 1: Introducere în Rețele}{ Iun 2020}
+
+\resumePOR{Certificare ECDL}{ Computer Essentials, Procesare de Text, Foi de Calcul, PowerPoint, Baze de Date}{ Iun 2021}
+
+\resumePOR{Certificat Limba Engleză}{ Nivel B2 \\ (obținut prin examenul de bacalaureat)}{ Iun 2023}
+
+\resumePOR{Adobe Workshop for Girls}{ HTML, CSS, JavaScript \\ (program de încurajare a fetelor în tech)}{ Iun 2023}
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-------------------------------------------
+%-----------Competențe tehnice-----------------
+\section{\textbf{Competențe Tehnice}}
+
+\noindent \textit{Majoritatea competențelor enumerate mai jos au fost dobândite și consolidate prin cursuri relevante din programul universitar.}
+
+\begin{tabularx}{\textwidth}{X X X X}
+\textbf{CAD} & \textbf{Electronică} & \textbf{Programare} & \textbf{Dezvoltare Web} \\
+AutoCAD (\textit{Avansat}) & Arduino (\textit{Intermediar}) & C (\textit{Intermediar}) & HTML (\textit{Avansat}) \\
+Fusion 360 (\textit{Avansat}) & Vivado (\textit{Începător}) & C++ (\textit{Intermediar}) & CSS (\textit{Avansat}) \\
+CATIA (\textit{Avansat}) & Verilog (\textit{Începător}) & Java (\textit{Începător}) & Astro (\textit{Avansat}) \\
+SolidWorks (\textit{Avansat}) & LabVIEW (\textit{Avansat}) & Python (\textit{Intermediar}) & Svelte (\textit{Intermediar}) \\
+Blender (\textit{doar Modelare}) & Logisim (\textit{Începător}) &  & React (\textit{Intermediar}) \\
+ &  &  & JavaScript (\textit{Intermediar}) \\
+ &  &  & TypeScript (\textit{Intermediar}) \\
+\end{tabularx}
+
+
+%-----------PROIECTE-----------------
+\section{\textbf{Proiecte Personale}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {\href{https://github.com/taquitohh/DIDI.git}{Website Educațional — Vectori în Programare}} 
+      {Proiect Personal pentru Informatică de Liceu} 
+      {2022}
+
+      \resumeItemListStart
+        \item {Am creat un website personal pentru a preda concepte fundamentale de programare surorii mele mai mici.}
+        \item {M-am concentrat pe tablouri, incluzând declarare, parcurgere, inserare, ștergere, verificarea proprietăților și sortare (bubble sort, selection sort, insertion sort, interclasare).}
+        \item {Am dezvoltat exemple interactive și probleme rezolvate pentru consolidarea învățării.}
+        \item {Construit cu Astro și JavaScript, îmbunătățind abilitățile în dezvoltare web și structurarea conținutului educațional pentru claritate și utilizabilitate.}
+    \resumeItemListEnd
+
+
+   \resumeProject
+      {\href{https://github.com/taquitohh/atestat3.0}{Model Website — Rainbow Six Siege}} 
+      {Proiect Frontend (Fără Bază de Date)} 
+      {2022 -- 2023}
+
+      \resumeItemListStart
+        \item {Am dezvoltat o replică frontend completă a website-ului oficial Tom Clancy's Rainbow Six® Siege.}
+        \item {Am folosit Astro, HTML, CSS, Svelte și JavaScript pentru a recrea layout-ul, structura, animațiile și fluxul utilizatorului.}
+        \item {Mi-am îmbunătățit înțelegerea arhitecturii web, dezvoltării bazate pe componente și designului UI/UX curat.}
+        \item {Mi-am consolidat capacitatea de auto-învățare a noilor tehnologii precum Astro și Svelte.}
+    \resumeItemListEnd
+
+
+    \resumeProject
+      {Carmangerie — Website de Prezentare} 
+      {Proiect Frontend (Fără Bază de Date, Colaborativ)} 
+      {2022 -- 2023}
+ 
+      \resumeItemListStart
+        \item {Am dezvoltat un website frontend complet pentru o afacere mică de carne și mezeluri, prezentând produsele și serviciile lor.}
+        \item {Am folosit Astro, HTML, CSS și JavaScript pentru a crea un design atractiv, responsive și prietenos cu utilizatorul.}
+        \item {Am îmbunătățit abilitățile în design de layout, UI/UX și crearea de componente web interactive.}
+        \item {Am colaborat cu un coleg de clasă, coordonând sarcinile și combinând ideile într-un website coerent.}
+    \resumeItemListEnd
+
+
+     \resumeProject
+      {Model Website — Eneba} 
+      {Proiect Frontend (Fără Bază de Date)} 
+      {Mar -- Iun 2024}
+
+      \resumeItemListStart
+        \item {Am construit o replică funcțională React + TypeScript a website-ului Eneba ca parte a cursului Web102 Hackademy.}
+        \item {M-am concentrat pe reproducerea UI/UX, modularitatea componentelor și designul responsive.}
+        \item {Am câștigat experiență practică cu concepte React precum hooks, gestionarea stării, props și componente reutilizabile.}
+    \resumeItemListEnd
+    
+    \resumeProject
+          {\href{https://github.com/xon-patrick/Chain-of-Dimensions-Calc.git}{Proiect de Echipă — Calculator de Dimensiuni}} 
+          {Proiect Academic de Anul I pentru cursul "Procese Industriale" (dezvoltat în C)} 
+          {Dec 2023 -- Ian 2024}
+    
+          \resumeItemListStart
+            \item {Am ales să dezvolt aplicația în C pentru a calcula dimensiuni într-un lanț de măsurători bazat pe input-ul utilizatorului.}
+            \item {Am implementat o interfață grafică folosind biblioteca raygui, oferind un panou frontal simplu și intuitiv pentru interacțiunea utilizatorului.}
+            \item {Am colaborat cu o echipă, îmbunătățind abilitățile de lucru în echipă, planificare și debugging în C.}
+            \item {Am îmbunătățit înțelegerea integrării componentelor GUI în aplicații C și gestionarea eficientă a input-ului utilizatorului.}
+        \resumeItemListEnd
+
+    \resumeProject
+          {\href{https://github.com/taquitohh/atestat_Diana_Iaminsia.git}{Website — "Lockdown Protocol"}} 
+          {Proiect Frontend (Astro, JavaScript)} 
+          {Mar 2024}
+    
+          \resumeItemListStart
+            \item Am dezvoltat un website static de prezentare pentru jocul *Lockdown Protocol*, construit cu Astro și JavaScript.
+            \item Am proiectat o structură clară și intuitivă incluzând o hartă interactivă a lumii jocului, o prezentare clară multi-secțiune și o galerie extensivă de imagini.
+            \item M-am concentrat pe oferirea unei experiențe de utilizare organizate și coerente vizual, inspirată de mecanica și atmosfera jocului.
+            \item Am îmbunătățit înțelegerea structurării bazate pe componente în Astro, layout-uri responsive și optimizarea resurselor statice.
+        \resumeItemListEnd
+    
+
+        \resumeProject
+          {\href{https://github.com/xon-patrick/SongApp.git}{Proiect de Echipă — SongApp}} 
+          {Proiect de Grup Matematici Avansate pentru cursul "Matematici Speciale" (Python)} 
+          {Apr 2024}
+    
+          \resumeItemListStart
+            \item {Am dezvoltat o aplicație Python care preia un fișier ".wav" și îl transformă în date de frecvență folosind Transformata Fourier.}
+            \item {Am implementat un sistem de potrivire pentru a identifica melodia dintr-o bază de date bazat pe analiza frecvențelor.}
+            \item {Am colaborat cu o echipă, îmbunătățind abilitățile de lucru în echipă, planificare și implementare de algoritmi.}
+            \item {Am îmbunătățit înțelegerea aplicării Transformatei Fourier în aplicații practice și gestionarea datelor audio în Python.}
+        \resumeItemListEnd
+    
+        \resumeProject
+    {\href{https://github.com/taquitohh/Proiect_RN.git}{Generator de Scripturi Blender Bazat pe Rețele Neuronale}}
+    {Python, React, TypeScript — Rețele Neuronale}
+    {2025 (În lucru)}
+
+    \resumeItemListStart
+        \item Dezvolt un sistem bazat pe rețele neuronale care generează scripturi Python pentru Blender bazate pe parametrii furnizați de utilizator.
+        \item Implementez modelul principal în Python și îl integrez cu o interfață web React + TypeScript pentru configurare și vizualizare în timp real.
+        \item Scopul este automatizarea scriptării geometriei procedurale în Blender pentru începători și prototipare rapidă.
+    \resumeItemListEnd
+    
+
+
+
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+
+
+%-----------Voluntariate-----------------
+\section{\textbf{Voluntariate}}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\href{https://www.facebook.com/riseupstudentfest/}{RiseUp - ediția 2023}}{ASPOLI}
+  {București, festival în aer liber}{Oct 2023}
+  \resumeItemListStart
+    \item {Coordonarea participanților.}
+    \item {Prima experiență majoră de voluntariat; a ajutat la dezvoltarea abilităților de comunicare, rezolvarea rapidă a problemelor și menținerea calmului și ordinii printre participanți.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://startup.upb.ro/}{StartUp - ediția 2023}}{ASPOLI}
+  {București, Rectorat UPB}{26 - 27 Oct 2023}
+  \resumeItemListStart
+    \item {Am ghidat invitații.}
+    \item {Am asistat la concursul anual unde tinerii își prezintă ideile de afaceri.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://robofest.upb.ro/}{Robo-Fest - ediția 2023}}{ASPOLI}
+  {București, Rectorat UPB}{1 - 3 Nov 2023}
+  \resumeItemListStart
+    \item {Am furnizat informații corecte invitaților.}
+    \item {Am asistat la dezvoltarea grafică a materialelor folosite pentru promovare.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://polijobs.upb.ro/}{POLIJobs - ediția 2023}}{ASPOLI}
+  {București, Rectorat UPB}{Nov 2023}
+  \resumeItemListStart
+    \item {Am planificat organizarea și relațiile din echipă.}
+    \item {Am organizat eficient echipa.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://efest.upb.ro/}{EFest - ediția 2024}}{ASPOLI}
+  {București, Rectorat UPB}{1 - 14 Apr 2024}
+  \resumeItemListStart
+    \item {Am furnizat informații corecte invitaților.}
+    \item {Am arbitrat meciuri.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://natieprineducatie.ro/}{First Tech Challenge România - Regional / Național}}{Nație prin Educație}
+  {București / Cluj / Iași / Arad}{25 Ian - 24 Mar 2024}
+  \resumeItemListStart
+    \item {Voluntariat alumni.}
+    \item {Arbitru / Inspector de Teren / Inspector de Robot.}
+  \resumeItemListEnd
+\vspace{-2mm}
+
+\resumeSubheading
+  {\href{https://natieprineducatie.ro/}{First Tech Challenge România - Regional}}{Nație prin Educație}
+  {Piatra Neamț / Pitești}{17 Ian - 9 Feb 2025}
+  \resumeItemListStart
+    \item {Voluntariat alumni.}
+    \item {Arbitru / Inspector de Teren / Inspector de Robot.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+\end{document}
