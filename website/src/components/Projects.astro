@@ -5,40 +5,39 @@ const projects = [
     description: 'Sistem AI care generează scripturi Python pentru geometrie procedurală în Blender, bazat pe parametri furnizați de utilizator.',
     tech: ['Python', 'React', 'TypeScript', 'Neural Networks'],
     github: 'https://github.com/taquitohh/Proiect_RN.git',
-    image: 'E:/github/Portofoliu_personal/screenshots/rn.jpeg',
-    status: 'Finalizat',
-    year: '2025'
+    image: '/Portofoliu_personal/screenshots/rn.png',
+    year: '2026'
   },
   {
     title: 'Eneba Website Clone',
     description: 'Replică funcțională a site-ului Eneba construită cu React și TypeScript, cu focus pe UI/UX și design responsive.',
     tech: ['React', 'TypeScript', 'CSS'],
     github: 'https://github.com/taquitohh/hackademag.git',
-    image: 'E:/github/Portofoliu_personal/screenshots/eneba.jpeg',
+    image: '/Portofoliu_personal/screenshots/eneba.png',
     year: '2024'
   },
   {
-    title: 'SongApp - Audio Recognition',
-    description: 'Aplicație Python care identifică melodii din fișiere .wav folosind Fourier Transform pentru analiza frecvențelor.',
-    tech: ['Python', 'FFT', 'Audio Processing'],
-    github: 'https://github.com/xon-patrick/SongApp.git',
-    image: '/images/projects/songapp.jpg',
-    year: '2024'
+    title: 'Proiect_TW',
+    description: 'Site de prezentare și magazin online pentru Liquor Loft, cu accent pe selectia de băuturi fine, rețete de cocktailuri și integrare cu o bază de date.',
+    tech: [ 'Astro','JavaScript','TypeScript','Node.js','Express', 'MySQL/MariaDB', 'Docker'],
+    github: 'https://github.com/taquitohh/Proiect_TW',
+    image: '/Portofoliu_personal/screenshots/LL.png',
+    year: '2025'
   },
   {
-    title: 'Educational Website - Vectors',
-    description: 'Platformă interactivă de învățare pentru operații cu vectori și algoritmi de sortare, creată pentru a învăța concepte de programare.',
-    tech: ['Astro', 'JavaScript', 'CSS'],
-    github: 'https://github.com/taquitohh/DIDI.git',
-    image: '/images/projects/vectors.jpg',
-    year: '2022'
+    title: 'Keep-Talk-V3',
+    description: 'Proiect colaborativ: recreere Java a jocului Keep Talking and Nobody Explodes cu interfață modernă, module noi și installer profesionist.',
+    tech: ['Java', 'Batchfile', 'NSIS'],
+    github: 'https://github.com/DarkShadow1107/Keep-Talk-V3',
+    image: '/Portofoliu_personal/screenshots/bomb1.png',
+    year: '2025'
   },
   {
     title: 'Rainbow Six Siege Website',
     description: 'Replică frontend a site-ului oficial Rainbow Six Siege cu animații și structură component-based.',
     tech: ['Astro', 'Svelte', 'JavaScript', 'CSS'],
     github: 'https://github.com/taquitohh/atestat3.0',
-    image: 'E:/github/Portofoliu_personal/screenshots/rainbow.jpeg',
+      image: '/Portofoliu_personal/screenshots/rainbow.png',
     year: '2023'
   },
   {
@@ -46,7 +45,7 @@ const projects = [
     description: 'Site de prezentare pentru jocul Lockdown Protocol cu hartă interactivă și galerie de imagini.',
     tech: ['Astro', 'JavaScript', 'CSS'],
     github: 'https://github.com/taquitohh/atestat_Diana_Iaminsia.git',
-    image: 'E:/github/Portofoliu_personal/screenshots/lockdown.jpeg',
+    image: '/Portofoliu_personal/screenshots/lockdown.png',
     year: '2024'
   }
 ];
@@ -64,11 +63,12 @@ const projects = [
       {projects.map((project, index) => (
         <article class="project-card" style={`--delay: ${index * 0.1}s`}>
           <div class="project-image">
-            <div class="image-placeholder">
-              <span class="placeholder-icon">🚀</span>
-            </div>
-            {project.status && (
-              <span class="project-status">{project.status}</span>
+            {project.image ? (
+              <img src={project.image} alt={project.title} />
+            ) : (
+              <div class="image-placeholder">
+                <span class="placeholder-icon">🚀</span>
+              </div>
             )}
           </div>
           
@@ -170,6 +170,14 @@ const projects = [
     height: 200px;
     background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
     overflow: hidden;
+  }
+
+  /* ensure images fill container and align top to hide bottom gap */
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .image-placeholder {
